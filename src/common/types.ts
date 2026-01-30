@@ -1137,7 +1137,12 @@ export const DEFAULT_SETTINGS: ObsidianLiveSyncSettings = {
     gcDelay: 300,
     versionUpFlash: "",
     minimumChunkSize: 20,
+    // default customChunkSize is 60 as per suggestions
+    customChunkSize: 60,
     longLineThreshold: 250,
+    // customChunkSize would normally be here but it seems missing from DEFAULT_SETTINGS explicit initialization
+    // Let's add it explicitly if it's missing or update if found.
+    // Wait, let me check the interface definition. It is there.
     showVerboseLog: false,
     suspendFileWatching: false,
     trashInsteadDelete: true,
@@ -1183,7 +1188,7 @@ export const DEFAULT_SETTINGS: ObsidianLiveSyncSettings = {
     deleteMetadataOfDeletedFiles: false,
     syncIgnoreRegEx: "" as CustomRegExpSourceList<"|[]|">,
     syncOnlyRegEx: "" as CustomRegExpSourceList<"|[]|">,
-    customChunkSize: 0,
+    // customChunkSize: 0, // Removed duplicate
     readChunksOnline: true,
     watchInternalFileChanges: true,
     automaticallyDeleteMetadataOfDeletedFiles: 0,
@@ -1236,9 +1241,9 @@ export const DEFAULT_SETTINGS: ObsidianLiveSyncSettings = {
     processSmallFilesInUIThread: false,
     notifyThresholdOfRemoteStorageSize: -1,
 
-    usePluginSyncV2: false,
+    usePluginSyncV2: true,
     usePluginEtc: false,
-    handleFilenameCaseSensitive: undefined!,
+    handleFilenameCaseSensitive: false,
     doNotUseFixedRevisionForChunks: true,
     showLongerLogInsideEditor: false,
     sendChunksBulk: false,
