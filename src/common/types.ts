@@ -1174,7 +1174,7 @@ export const DEFAULT_SETTINGS: ObsidianLiveSyncSettings = {
     syncInternalFiles: false,
     syncInternalFilesBeforeReplication: false,
     syncInternalFilesIgnorePatterns:
-        "\\/node_modules\\/, \\/\\.git\\/, \\/obsidian-livesync\\/" as CustomRegExpSourceList<",">,
+        "\\/node_modules\\/, \\/\\.git\\/, \\/just-sync\\/" as CustomRegExpSourceList<",">,
     syncInternalFilesTargetPatterns: "" as CustomRegExpSourceList<",">,
     syncInternalFilesInterval: 60,
     additionalSuffixOfDatabaseName: "",
