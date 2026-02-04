@@ -146,7 +146,14 @@ export async function isDocContentSame(
         const ab1 = await blob1.slice(i, i + checkQuantum).arrayBuffer();
         const ab2 = await blob2.slice(i, i + checkQuantum).arrayBuffer();
         i += checkQuantum;
-        if ((await arrayBufferToBase64Single(ab1)) != (await arrayBufferToBase64Single(ab2))) return false;
+        
+        // Direct byte comparison is much faster than Base64 conversion
+        const arr1 = new Uint8Array(ab1);
+        const arr2 = new Uint8Array(ab2);
+        if (arr1.length !== arr2.length) return false;
+        for (let j = 0; j < arr1.length; j++) {
+            if (arr1[j] !== arr2[j]) return false;
+        }
     }
     return true;
 }
