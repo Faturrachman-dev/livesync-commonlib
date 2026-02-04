@@ -238,7 +238,7 @@ logPane:
   autoScroll: Auto scroll
   logWindowOpened: Log window opened
   pause: Pause
-  title: Self-hosted LiveSync Log
+  title: Just Sync Log
   wrap: Wrap
 Maximum delay for batch database updating: Maximum delay for batch database updating
 Maximum file size: Maximum file size
@@ -316,16 +316,16 @@ moduleLiveSyncMain:
   logAdditionalSafetyScan: Additional safety scan...
   logLoadingPlugin: Loading plugin...
   logPluginInitCancelled: Plugin initialisation was cancelled by a module
-  logPluginVersion: Self-hosted LiveSync v${manifestVersion} ${packageVersion}
-  logReadChangelog: LiveSync has updated, please read the changelog!
+  logPluginVersion: Just Sync v${manifestVersion} ${packageVersion}
+  logReadChangelog: Just Sync has updated, please read the changelog!
   logSafetyScanCompleted: Additional safety scan completed
   logSafetyScanFailed: Additional safety scan has failed on a module
   logUnloadingPlugin: Unloading plugin...
-  logVersionUpdate: LiveSync has been updated, In case of breaking updates, all
+  logVersionUpdate: Just Sync has been updated, In case of breaking updates, all
     automatic synchronization has been temporarily disabled. Ensure that all
     devices are up to date before enabling.
   msgScramEnabled: >
-    Self-hosted LiveSync has been configured to ignore some events. Is this
+    Just Sync has been configured to ignore some events. Is this
     correct?
 
 

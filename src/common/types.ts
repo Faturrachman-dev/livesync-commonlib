@@ -96,6 +96,12 @@ export interface CouchDBConnection {
      * Seems stable, so promoted to the normal setting.
      */
     useRequestAPI: boolean;
+
+    /**
+     * Name of the Cloudflare tunnel to run (e.g. 'obsidian').
+     * Desktop only. Empty string means disabled.
+     */
+    cloudflaredTunnelName: string;
 }
 
 /**
@@ -1264,6 +1270,7 @@ export const DEFAULT_SETTINGS: ObsidianLiveSyncSettings = {
 
     bucketCustomHeaders: "",
     couchDB_CustomHeaders: "",
+    cloudflaredTunnelName: "",
     useJWT: false,
     jwtAlgorithm: "",
     jwtKey: "",
