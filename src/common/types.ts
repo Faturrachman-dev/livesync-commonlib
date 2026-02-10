@@ -102,6 +102,24 @@ export interface CouchDBConnection {
      * Desktop only. Empty string means disabled.
      */
     cloudflaredTunnelName: string;
+
+    /**
+     * CouchDB backend to use: 'pouchdb-server', 'native', or '' (none).
+     * Desktop only.
+     */
+    couchdbBackend: "" | "pouchdb-server" | "native";
+
+    /**
+     * Local port for CouchDB / PouchDB Server (default 5984).
+     * Desktop only.
+     */
+    couchdbPort: number;
+
+    /**
+     * Directory for PouchDB Server data storage.
+     * Desktop only. Empty string means use default.
+     */
+    pouchdbDataDir: string;
 }
 
 /**
@@ -1271,6 +1289,9 @@ export const DEFAULT_SETTINGS: ObsidianLiveSyncSettings = {
     bucketCustomHeaders: "",
     couchDB_CustomHeaders: "",
     cloudflaredTunnelName: "",
+    couchdbBackend: "",
+    couchdbPort: 5984,
+    pouchdbDataDir: "",
     useJWT: false,
     jwtAlgorithm: "",
     jwtKey: "",
