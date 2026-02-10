@@ -62,7 +62,6 @@ export const bumpRemoteVersion = async (db: PouchDB.Database, barrier: number = 
 export const checkSyncInfo = async (db: PouchDB.Database): Promise<boolean> => {
     try {
         const syncinfo = (await db.get(SYNCINFO_ID)) as SyncInfo;
-        console.log(syncinfo);
         // if we could decrypt the doc, it must be ok.
         return true;
     } catch (ex: any) {
